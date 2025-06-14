@@ -83,6 +83,4 @@ A simple **Java-based console application** that helps manage a library using fu
 - OOP Principles
 - Console-based Input/Output
 
----
 
-## 📂 Project Structure (Optional)
