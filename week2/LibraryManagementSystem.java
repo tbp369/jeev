@@ -371,7 +371,7 @@ public class LibraryManagementSystem {
         Book book1 = new Book("The Lord of the Rings", "J.R.R. Tolkien", "Fantasy");
         Book book2 = new Book("Pride and Prejudice", "Jane Austen", "Romance");
         Book book3 = new Book("1984", "George Orwell", "Dystopian");
-        Book book4 = new Book("To Kill a Mockingbird", "Harper Lee", "Fiction");
+        Book book4 = new Book("myworld", "bhavani", "Fiction");
 
         try {
             library.addBook(book1);
@@ -382,9 +382,9 @@ public class LibraryManagementSystem {
             System.out.println("Error adding sample books: " + e.getMessage());
         }
 
-        StudentMember student1 = new StudentMember("Alice Smith", "alice@example.com", "111-222-3333");
-        TeacherMember teacher1 = new TeacherMember("Bob Johnson", "bob@example.com", "444-555-6666");
-        Librarian librarian1 = new Librarian("Carol White", "carol@example.com", "777-888-9999");
+        StudentMember student1 = new StudentMember("Ravi", "ravi343@example.com", "111-222-3333");
+        TeacherMember teacher1 = new TeacherMember("rohan", "ron45@example.com", "444-555-6666");
+        Librarian librarian1 = new Librarian("priya", "priya45@example.com", "777-888-9999");
 
         try {
             library.registerMember(student1);
