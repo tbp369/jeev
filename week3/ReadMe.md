@@ -137,7 +137,7 @@ AdvancedStudentManagementSystem (Main Class)
 
 ```java
 // Adding a new student
-Student student = new Student(101, "John Doe", 20, "Grade 12", "123 Main St");
+Student student = new Student(101, "Bahavni", 20, "Grade 12", "Narsaraopeta");
 manager.addStudent(student);
 
 // Searching for a student
@@ -147,7 +147,7 @@ if (found != null) {
 }
 
 // Updating student information
-manager.updateStudent(101, "John Smith", 21, "Grade 12", "456 Oak Ave");
+manager.updateStudent(101, "Prasad", 21, "Grade 12", "Vijayawada");
 ```
 
 ## 🔧 Configuration
