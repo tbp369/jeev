@@ -74,6 +74,7 @@ This project follows a modular, maintainable structure composed of multiple laye
 
 ## Output
 System logs saved to: student_app.log
+
 Student data exported to: students_export.csv
 
 ## 📫 Contact
