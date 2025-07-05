@@ -55,12 +55,15 @@ This project follows a modular, maintainable structure composed of multiple laye
 ## sql code
 
 -- Create the database
+
 `CREATE DATABASE studentdb;`
 
 -- Switch to the database
 `USE studentdb;`
 
 -- Create the 'students' table
+
+
 `CREATE TABLE students (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
@@ -69,11 +72,11 @@ This project follows a modular, maintainable structure composed of multiple laye
     course VARCHAR(100)
 );`
 
-##Output
+## Output
 System logs saved to: student_app.log
 Student data exported to: students_export.csv
 
-##📫 Contact
+## 📫 Contact
 
 For questions, improvements, or contributions, please contact:
 
