@@ -64,12 +64,12 @@ This project follows a modular, maintainable structure composed of multiple laye
 -- Create the 'students' table
 
 
-`CREATE TABLE students (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+`CCREATE TABLE students (
+    id INT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    age INT NOT NULL,
-    email VARCHAR(100),
-    course VARCHAR(100)
+    email VARCHAR(100) NOT NULL UNIQUE,
+    course VARCHAR(100) NOT NULL,
+    grade CHAR(2) NOT NULL CHECK (grade IN ('A+', 'A', 'B+', 'B', 'C', 'D', 'F'))
 );`
 
 ## Output
