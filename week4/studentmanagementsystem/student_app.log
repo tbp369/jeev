@@ -1,0 +1,150 @@
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:bae66bc5aba7f9587c6f9e904e33304, Subject:CN=DigiCert Timestamp 2024, O=DigiCert, C=US, Issuer:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Key type:RSA, Length:4096, Cert Id:-360568100, Valid from:Thu Sep 26 05:30:00 IST 2024, Valid until:Mon Nov 26 05:29:59 IST 2035
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:73637b724547cd847acfd28662a5e5b, Subject:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Issuer:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:-1087426625, Valid from:Wed Mar 23 05:30:00 IST 2022, Valid until:Mon Mar 23 05:29:59 IST 2037
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA384withRSA, Serial:e9b188ef9d02de7efdb50e20840185a, Subject:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Issuer:CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:845088433, Valid from:Mon Aug 01 05:30:00 IST 2022, Valid until:Mon Nov 10 05:29:59 IST 2031
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA1withDSA, Serial:10, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Sun Microsystems Inc, L=Palo Alto, ST=CA, C=US, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Sun Microsystems Inc, L=Palo Alto, ST=CA, C=US, Key type:DSA, Length:1024, Cert Id:1776909028, Valid from:Wed Apr 25 12:30:00 IST 2001, Valid until:Sat Apr 25 12:30:00 IST 2020
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA1withDSA, Serial:40216811, Subject:CN=JCE Code Signing CA, OU=IBM Code Signing, O=IBM Corporation, C=US, Issuer:CN=JCE Code Signing CA, OU=IBM Code Signing, O=IBM Corporation, C=US, Key type:DSA, Length:1024, Cert Id:-1826632887, Valid from:Thu Feb 05 03:15:53 IST 2004, Valid until:Wed May 27 02:15:53 IST 2020
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA1withDSA, Serial:37f939e5, Subject:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Issuer:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Key type:DSA, Length:1024, Cert Id:437846785, Valid from:Tue Oct 05 05:06:05 IST 1999, Valid until:Wed Oct 04 05:06:05 IST 2000
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:MD5withRSA, Serial:1, Subject:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Issuer:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Key type:RSA, Length:512, Cert Id:-349125968, Valid from:Thu Oct 31 20:57:44 IST 2002, Valid until:Wed Oct 31 20:57:44 IST 2007
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:MD5withRSA, Serial:2, Subject:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Issuer:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Key type:RSA, Length:512, Cert Id:1200127482, Valid from:Thu Oct 31 20:57:44 IST 2002, Valid until:Wed Oct 31 20:57:44 IST 2007
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:bae66bc5aba7f9587c6f9e904e33304, Subject:CN=DigiCert Timestamp 2024, O=DigiCert, C=US, Issuer:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Key type:RSA, Length:4096, Cert Id:-360568100, Valid from:Thu Sep 26 05:30:00 IST 2024, Valid until:Mon Nov 26 05:29:59 IST 2035
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:73637b724547cd847acfd28662a5e5b, Subject:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Issuer:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:-1087426625, Valid from:Wed Mar 23 05:30:00 IST 2022, Valid until:Mon Mar 23 05:29:59 IST 2037
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA384withRSA, Serial:e9b188ef9d02de7efdb50e20840185a, Subject:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Issuer:CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:845088433, Valid from:Mon Aug 01 05:30:00 IST 2022, Valid until:Mon Nov 10 05:29:59 IST 2031
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:bae66bc5aba7f9587c6f9e904e33304, Subject:CN=DigiCert Timestamp 2024, O=DigiCert, C=US, Issuer:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Key type:RSA, Length:4096, Cert Id:-360568100, Valid from:Thu Sep 26 05:30:00 IST 2024, Valid until:Mon Nov 26 05:29:59 IST 2035
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:73637b724547cd847acfd28662a5e5b, Subject:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Issuer:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:-1087426625, Valid from:Wed Mar 23 05:30:00 IST 2022, Valid until:Mon Mar 23 05:29:59 IST 2037
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA384withRSA, Serial:e9b188ef9d02de7efdb50e20840185a, Subject:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Issuer:CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:845088433, Valid from:Mon Aug 01 05:30:00 IST 2022, Valid until:Mon Nov 10 05:29:59 IST 2031
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:bae66bc5aba7f9587c6f9e904e33304, Subject:CN=DigiCert Timestamp 2024, O=DigiCert, C=US, Issuer:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Key type:RSA, Length:4096, Cert Id:-360568100, Valid from:Thu Sep 26 05:30:00 IST 2024, Valid until:Mon Nov 26 05:29:59 IST 2035
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:73637b724547cd847acfd28662a5e5b, Subject:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Issuer:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:-1087426625, Valid from:Wed Mar 23 05:30:00 IST 2022, Valid until:Mon Mar 23 05:29:59 IST 2037
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA384withRSA, Serial:e9b188ef9d02de7efdb50e20840185a, Subject:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Issuer:CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:845088433, Valid from:Mon Aug 01 05:30:00 IST 2022, Valid until:Mon Nov 10 05:29:59 IST 2031
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.42_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.42_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1414038441, Valid from:Sun Jun 29 15:42:04 IST 2025, Valid until:Wed Jun 27 15:42:04 IST 2035
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.42_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.42_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-2005798768, Valid from:Sun Jun 29 15:42:04 IST 2025, Valid until:Wed Jun 27 15:42:04 IST 2035
+Jul 05, 2025 7:16:15 PM jdk.internal.event.EventHelper logTLSHandshakeEvent
+FINE:  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1414038441
+Jul 05, 2025 7:16:15 PM com.student.Main main
+INFO: Student added: Student [ID=1, Name=Bhavani, Email=zprasad@gmail.com, Course=maths, Grade=B]
+Jul 05, 2025 7:16:35 PM com.student.Main main
+INFO: Displayed all students.
+Jul 05, 2025 7:16:57 PM com.student.Main main
+INFO: Student added: Student [ID=2, Name=sai, Email=as, Course=maths2, Grade=A]
+Jul 05, 2025 7:17:02 PM com.student.Main main
+INFO: Displayed all students.
+Jul 05, 2025 7:18:22 PM com.student.Main main
+INFO: Program exited by user.
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:bae66bc5aba7f9587c6f9e904e33304, Subject:CN=DigiCert Timestamp 2024, O=DigiCert, C=US, Issuer:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Key type:RSA, Length:4096, Cert Id:-360568100, Valid from:Thu Sep 26 05:30:00 IST 2024, Valid until:Mon Nov 26 05:29:59 IST 2035
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:73637b724547cd847acfd28662a5e5b, Subject:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Issuer:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:-1087426625, Valid from:Wed Mar 23 05:30:00 IST 2022, Valid until:Mon Mar 23 05:29:59 IST 2037
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA384withRSA, Serial:e9b188ef9d02de7efdb50e20840185a, Subject:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Issuer:CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:845088433, Valid from:Mon Aug 01 05:30:00 IST 2022, Valid until:Mon Nov 10 05:29:59 IST 2031
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA1withDSA, Serial:10, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Sun Microsystems Inc, L=Palo Alto, ST=CA, C=US, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Sun Microsystems Inc, L=Palo Alto, ST=CA, C=US, Key type:DSA, Length:1024, Cert Id:1776909028, Valid from:Wed Apr 25 12:30:00 IST 2001, Valid until:Sat Apr 25 12:30:00 IST 2020
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA1withDSA, Serial:40216811, Subject:CN=JCE Code Signing CA, OU=IBM Code Signing, O=IBM Corporation, C=US, Issuer:CN=JCE Code Signing CA, OU=IBM Code Signing, O=IBM Corporation, C=US, Key type:DSA, Length:1024, Cert Id:-1826632887, Valid from:Thu Feb 05 03:15:53 IST 2004, Valid until:Wed May 27 02:15:53 IST 2020
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA1withDSA, Serial:37f939e5, Subject:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Issuer:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Key type:DSA, Length:1024, Cert Id:437846785, Valid from:Tue Oct 05 05:06:05 IST 1999, Valid until:Wed Oct 04 05:06:05 IST 2000
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:MD5withRSA, Serial:1, Subject:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Issuer:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Key type:RSA, Length:512, Cert Id:-349125968, Valid from:Thu Oct 31 20:57:44 IST 2002, Valid until:Wed Oct 31 20:57:44 IST 2007
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:MD5withRSA, Serial:2, Subject:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Issuer:CN=JCE Development, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US, Key type:RSA, Length:512, Cert Id:1200127482, Valid from:Thu Oct 31 20:57:44 IST 2002, Valid until:Wed Oct 31 20:57:44 IST 2007
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:bae66bc5aba7f9587c6f9e904e33304, Subject:CN=DigiCert Timestamp 2024, O=DigiCert, C=US, Issuer:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Key type:RSA, Length:4096, Cert Id:-360568100, Valid from:Thu Sep 26 05:30:00 IST 2024, Valid until:Mon Nov 26 05:29:59 IST 2035
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:73637b724547cd847acfd28662a5e5b, Subject:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Issuer:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:-1087426625, Valid from:Wed Mar 23 05:30:00 IST 2022, Valid until:Mon Mar 23 05:29:59 IST 2037
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA384withRSA, Serial:e9b188ef9d02de7efdb50e20840185a, Subject:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Issuer:CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:845088433, Valid from:Mon Aug 01 05:30:00 IST 2022, Valid until:Mon Nov 10 05:29:59 IST 2031
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:bae66bc5aba7f9587c6f9e904e33304, Subject:CN=DigiCert Timestamp 2024, O=DigiCert, C=US, Issuer:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Key type:RSA, Length:4096, Cert Id:-360568100, Valid from:Thu Sep 26 05:30:00 IST 2024, Valid until:Mon Nov 26 05:29:59 IST 2035
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:73637b724547cd847acfd28662a5e5b, Subject:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Issuer:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:-1087426625, Valid from:Wed Mar 23 05:30:00 IST 2022, Valid until:Mon Mar 23 05:29:59 IST 2037
+Jul 05, 2025 7:18:46 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA384withRSA, Serial:e9b188ef9d02de7efdb50e20840185a, Subject:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Issuer:CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:845088433, Valid from:Mon Aug 01 05:30:00 IST 2022, Valid until:Mon Nov 10 05:29:59 IST 2031
+Jul 05, 2025 7:18:47 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:3c9eb1fc89f733d3, Subject:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:-1250580323, Valid from:Thu Jul 07 05:18:44 IST 2016, Valid until:Tue Dec 31 05:30:00 IST 2030
+Jul 05, 2025 7:18:47 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:7dce108854cec524, Subject:CN=Oracle Corporation, OU=Java Software Code Signing, O=Oracle Corporation, Issuer:CN=JCE Code Signing CA, OU=Java Software Code Signing, O=Oracle Corporation, Key type:RSA, Length:2048, Cert Id:783883699, Valid from:Wed Jan 29 07:03:14 IST 2020, Valid until:Sun Dec 29 05:30:00 IST 2030
+Jul 05, 2025 7:18:47 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:bae66bc5aba7f9587c6f9e904e33304, Subject:CN=DigiCert Timestamp 2024, O=DigiCert, C=US, Issuer:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Key type:RSA, Length:4096, Cert Id:-360568100, Valid from:Thu Sep 26 05:30:00 IST 2024, Valid until:Mon Nov 26 05:29:59 IST 2035
+Jul 05, 2025 7:18:47 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:73637b724547cd847acfd28662a5e5b, Subject:CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US, Issuer:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:-1087426625, Valid from:Wed Mar 23 05:30:00 IST 2022, Valid until:Mon Mar 23 05:29:59 IST 2037
+Jul 05, 2025 7:18:47 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA384withRSA, Serial:e9b188ef9d02de7efdb50e20840185a, Subject:CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US, Issuer:CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US, Key type:RSA, Length:4096, Cert Id:845088433, Valid from:Mon Aug 01 05:30:00 IST 2022, Valid until:Mon Nov 10 05:29:59 IST 2031
+Jul 05, 2025 7:18:47 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.42_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.42_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1414038441, Valid from:Sun Jun 29 15:42:04 IST 2025, Valid until:Wed Jun 27 15:42:04 IST 2035
+Jul 05, 2025 7:18:47 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.42_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.42_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-2005798768, Valid from:Sun Jun 29 15:42:04 IST 2025, Valid until:Wed Jun 27 15:42:04 IST 2035
+Jul 05, 2025 7:18:47 PM jdk.internal.event.EventHelper logTLSHandshakeEvent
+FINE:  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1414038441
+Jul 05, 2025 7:18:47 PM com.student.Main main
+INFO: Student added: Student [ID=5, Name=raj, Email=raj@gmail.com, Course=science, Grade=A]
+Jul 05, 2025 7:18:58 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.42_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.42_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1414038441, Valid from:Sun Jun 29 15:42:04 IST 2025, Valid until:Wed Jun 27 15:42:04 IST 2035
+Jul 05, 2025 7:18:58 PM jdk.internal.event.EventHelper logX509CertificateEvent
+FINE: X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.42_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.42_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-2005798768, Valid from:Sun Jun 29 15:42:04 IST 2025, Valid until:Wed Jun 27 15:42:04 IST 2035
+Jul 05, 2025 7:18:58 PM jdk.internal.event.EventHelper logTLSHandshakeEvent
+FINE:  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1414038441
+Jul 05, 2025 7:18:58 PM com.student.Main main
+INFO: Displayed all students.
+Jul 05, 2025 7:19:06 PM com.student.Main main
+INFO: Program exited by user.
+Jul 05, 2025 7:43:08 PM org.junit.jupiter.engine.execution.ConditionEvaluator logResult
+FINER: Evaluation of condition [org.junit.jupiter.engine.extension.DisabledCondition] on [public void com.student.LoggerConfigTest.testLogFileCreated()] resulted in: ConditionEvaluationResult [enabled = true, reason = '@Disabled is not present']
+Jul 05, 2025 7:43:08 PM com.student.LoggerConfigTest testLogFileCreated
+INFO: This is a test log.
+Jul 05, 2025 8:09:36 PM org.junit.jupiter.engine.execution.ConditionEvaluator logResult
+FINER: Evaluation of condition [org.junit.jupiter.engine.extension.DisabledCondition] on [public void com.student.LoggerConfigTest.testLogFileCreated()] resulted in: ConditionEvaluationResult [enabled = true, reason = '@Disabled is not present']
+Jul 05, 2025 8:09:36 PM com.student.LoggerConfigTest testLogFileCreated
+INFO: This is a test log.
