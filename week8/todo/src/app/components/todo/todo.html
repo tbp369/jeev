@@ -1,0 +1,174 @@
+<div class="todo-container">
+  <!-- Header -->
+  <mat-toolbar color="primary" class="header-toolbar">
+    <span class="app-title">Todo App</span>
+    <span class="spacer"></span>
+    <span class="user-info" *ngIf="currentUser">Welcome, {{ currentUser.fullName }}</span>
+    <button mat-icon-button (click)="logout()" matTooltip="Logout">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="content-wrapper">
+    <!-- Add Task Form -->
+    <mat-card class="add-task-card">
+      <mat-card-header>
+        <mat-card-title>Add New Task</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="task-form">
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="title-field">
+              <mat-label>Task Title</mat-label>
+              <input matInput formControlName="title" placeholder="Enter task title">
+              <mat-error *ngIf="taskForm.get('title')?.invalid && taskForm.get('title')?.touched">
+                {{ getErrorMessage('title') }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="date-field">
+              <mat-label>Due Date (Optional)</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="dueDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Description (Optional)</mat-label>
+            <textarea matInput formControlName="description" placeholder="Enter task description" rows="3"></textarea>
+          </mat-form-field>
+
+          <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">
+              <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+              <mat-icon *ngIf="!isLoading">add</mat-icon>
+              <span *ngIf="!isLoading">Add Task</span>
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Search and Filter Controls -->
+    <mat-card class="controls-card">
+      <mat-card-content>
+        <div class="controls-row">
+          <mat-form-field appearance="outline" class="search-field">
+            <mat-label>Search Tasks</mat-label>
+            <input matInput (input)="onSearchChange($event.target.value || '')" placeholder="Search by title or description">
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="filter-field">
+            <mat-label>Filter</mat-label>
+            <mat-select [value]="currentFilter" (selectionChange)="onFilterChange($event.value)">
+              <mat-option value="all">All Tasks</mat-option>
+              <mat-option value="pending">Pending</mat-option>
+              <mat-option value="completed">Completed</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button mat-stroked-button (click)="toggleSortByDueDate()" [color]="sortByDueDate ? 'primary' : ''">
+            <mat-icon>{{ sortByDueDate ? 'schedule' : 'sort' }}</mat-icon>
+            {{ sortByDueDate ? 'Sorted by Due Date' : 'Sort by Due Date' }}
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Task Statistics -->
+    <div class="stats-row">
+      <mat-card class="stat-card">
+        <mat-card-content>
+          <div class="stat-content">
+            <mat-icon class="stat-icon total">assignment</mat-icon>
+            <div class="stat-info">
+              <div class="stat-number">{{ tasks.length }}</div>
+              <div class="stat-label">Total Tasks</div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="stat-card">
+        <mat-card-content>
+          <div class="stat-content">
+            <mat-icon class="stat-icon pending">pending_actions</mat-icon>
+            <div class="stat-info">
+              <div class="stat-number">{{ pendingTasks.length }}</div>
+              <div class="stat-label">Pending</div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="stat-card">
+        <mat-card-content>
+          <div class="stat-content">
+            <mat-icon class="stat-icon completed">check_circle</mat-icon>
+            <div class="stat-info">
+              <div class="stat-number">{{ completedTasks.length }}</div>
+              <div class="stat-label">Completed</div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Tasks List -->
+    <mat-card class="tasks-card">
+      <mat-card-header>
+        <mat-card-title>
+          Tasks 
+          <mat-chip-set>
+            <mat-chip *ngIf="currentFilter !== 'all'">{{ currentFilter | titlecase }}</mat-chip>
+            <mat-chip *ngIf="searchQuery">Search: "{{ searchQuery }}"</mat-chip>
+          </mat-chip-set>
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div *ngIf="filteredTasks.length === 0" class="no-tasks">
+          <mat-icon class="no-tasks-icon">assignment</mat-icon>
+          <p>{{ searchQuery || currentFilter !== 'all' ? 'No tasks found matching your criteria.' : 'No tasks yet. Add your first task above!' }}</p>
+        </div>
+
+        <div *ngFor="let task of filteredTasks" class="task-item" [class.completed]="task.completed" [class.overdue]="isOverdue(task)">
+          <div class="task-content">
+            <mat-checkbox 
+              [checked]="task.completed" 
+              (change)="toggleTaskCompletion(task)"
+              class="task-checkbox">
+            </mat-checkbox>
+
+            <div class="task-details">
+              <div class="task-title" [class.completed-text]="task.completed">
+                {{ task.title }}
+              </div>
+              
+              <div *ngIf="task.description" class="task-description">
+                {{ task.description }}
+              </div>
+
+              <div class="task-meta">
+                <span class="task-date">Created: {{ formatDate(task.createdAt) }}</span>
+                <span *ngIf="task.dueDate" class="task-due-date" [class.overdue-text]="isOverdue(task)">
+                  Due: {{ formatDate(task.dueDate) }}
+                  <mat-icon *ngIf="isOverdue(task)" class="overdue-icon">warning</mat-icon>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-actions">
+            <button mat-icon-button color="warn" (click)="deleteTask(task)" matTooltip="Delete Task">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
