@@ -14,7 +14,7 @@ A modern Todo app built with **Angular 19** and **Angular Material**, featuring 
 
 ## 📦 Installation and usage
 # 1. Install Node.js (if using Ubuntu/Linux)
-'sudo apt update && sudo apt install nodejs npm'
+"sudo apt update && sudo apt install nodejs npm"
 
 # 2. Install Angular CLI globally
 'npm install -g @angular/cli'
