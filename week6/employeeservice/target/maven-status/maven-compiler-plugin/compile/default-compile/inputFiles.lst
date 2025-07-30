@@ -1,7 +1,0 @@
-/home/ubuntu/employeeservice/src/main/java/org/app/employeeservice/security/JwtAuthenticationFilter.java
-/home/ubuntu/employeeservice/src/main/java/org/app/employeeservice/config/SecurityConfig.java
-/home/ubuntu/employeeservice/src/main/java/org/app/employeeservice/security/JwtUtil.java
-/home/ubuntu/employeeservice/src/main/java/org/app/employeeservice/controller/EmployeeController.java
-/home/ubuntu/employeeservice/src/main/java/org/app/employeeservice/model/Employee.java
-/home/ubuntu/employeeservice/src/main/java/org/app/employeeservice/repository/EmployeeRepository.java
-/home/ubuntu/employeeservice/src/main/java/org/app/employeeservice/EmployeeserviceApplication.java
