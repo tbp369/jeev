@@ -1,0 +1,117 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: dms-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: dms_auth
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    networks:
+      - dms-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  discovery-service:
+    build:
+      context: ../discovery-service
+      dockerfile: Dockerfile
+    container_name: dms-discovery
+    ports:
+      - "8761:8761"
+    networks:
+      - dms-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  auth-service:
+    build:
+      context: ../auth-service
+      dockerfile: Dockerfile
+    container_name: dms-auth
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/dms_auth?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://discovery-service:8761/eureka/
+    ports:
+      - "8081:8081"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      discovery-service:
+        condition: service_healthy
+    networks:
+      - dms-network
+
+  metadata-service:
+    build:
+      context: ../metadata-service
+      dockerfile: Dockerfile
+    container_name: dms-metadata
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/dms_metadata?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://discovery-service:8761/eureka/
+    ports:
+      - "8082:8082"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      discovery-service:
+        condition: service_healthy
+    networks:
+      - dms-network
+
+  file-service:
+    build:
+      context: ../file-service
+      dockerfile: Dockerfile
+    container_name: dms-file
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/dms_files?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://discovery-service:8761/eureka/
+    ports:
+      - "8083:8083"
+    volumes:
+      - file_uploads:/app/uploads
+    depends_on:
+      mysql:
+        condition: service_healthy
+      discovery-service:
+        condition: service_healthy
+    networks:
+      - dms-network
+
+  gateway-service:
+    build:
+      context: ../gateway-service
+      dockerfile: Dockerfile
+    container_name: dms-gateway
+    environment:
+      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://discovery-service:8761/eureka/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - discovery-service
+      - auth-service
+      - metadata-service
+      - file-service
+    networks:
+      - dms-network
+
+volumes:
+  mysql_data:
+  file_uploads:
+
+networks:
+  dms-network:
+    driver: bridge
+
