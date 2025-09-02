@@ -1,0 +1,241 @@
+@use '@angular/material' as mat;
+
+// Define your custom theme object using Material 3 palettes and design specs
+$my-theme: mat.define-theme((
+        color: (
+                theme-type: light,
+                primary: mat.$azure-palette,
+                tertiary: mat.$blue-palette,
+        ),
+        typography: (
+                brand-family: 'Roboto, "Helvetica Neue", sans-serif',
+        ),
+        density: (
+                scale: 0,
+        ),
+));
+
+// Apply the theme globally to all Angular Material components
+html {
+  @include mat.theme($my-theme);
+}
+
+// System-level color scheme and default appearance
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+
+// Custom layout and component styles—edit as needed
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #3f51b5;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #303f9f;
+}
+.btn-secondary {
+  background-color: #f5f5f5;
+  color: #333;
+}
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+.btn-danger {
+  background-color: #f44336;
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #d32f2f;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.form-control:focus {
+  outline: none;
+  border-color: #3f51b5;
+}
+.error {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.success {
+  color: #4caf50;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background-color: #3f51b5;
+  transition: width 0.3s ease;
+}
+.file-preview {
+  max-width: 100%;
+  max-height: 400px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.document-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.document-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+.document-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+.page-btn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.page-btn.active {
+  background-color: #3f51b5;
+  color: white;
+  border-color: #3f51b5;
+}
+.page-btn:hover:not(.active) {
+  background-color: #f5f5f5;
+}
+.header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.nav-link:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .document-grid {
+    grid-template-columns: 1fr;
+  }
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

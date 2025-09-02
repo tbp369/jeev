@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Document Management</h1>
+    <button class="btn btn-primary" routerLink="/upload">
+      <i class="material-icons">add</i>
+      Upload Document
+    </button>
+  </div>
+
+  <div class="search-section">
+    <div class="search-container">
+      <i class="material-icons search-icon">search</i>
+      <input 
+        type="text" 
+        class="search-bar" 
+        placeholder="Search documents by title, description, or uploader..."
+        [(ngModel)]="searchQuery"
+        (input)="onSearchChange()"
+      >
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div *ngIf="loading" class="loading">
+      <div class="spinner-large"></div>
+      <p>Loading documents...</p>
+    </div>
+
+    <div *ngIf="!loading && documents.length === 0" class="empty-state">
+      <i class="material-icons empty-icon">description</i>
+      <h3>No documents found</h3>
+      <p *ngIf="searchQuery">Try adjusting your search criteria</p>
+      <p *ngIf="!searchQuery">Start by uploading your first document</p>
+      <button class="btn btn-primary" routerLink="/upload">Upload Document</button>
+    </div>
+
+    <div *ngIf="!loading && documents.length > 0" class="documents-section">
+      <div class="document-grid">
+        <div *ngFor="let document of documents" class="document-card">
+          <div class="document-header">
+            <h3 class="document-title">{{ document.title }}</h3>
+            <div class="document-actions">
+              <button 
+                class="action-btn view-btn" 
+                (click)="viewDocument(document)"
+                title="View Document"
+              >
+                <i class="material-icons">visibility</i>
+              </button>
+              <button 
+                class="action-btn edit-btn" 
+                (click)="editDocument(document)"
+                title="Edit Document"
+              >
+                <i class="material-icons">edit</i>
+              </button>
+              <button 
+                class="action-btn download-btn" 
+                (click)="downloadDocument(document)"
+                title="Download File"
+              >
+                <i class="material-icons">download</i>
+              </button>
+              <button 
+                class="action-btn delete-btn" 
+                (click)="deleteDocument(document)"
+                title="Delete Document"
+              >
+                <i class="material-icons">delete</i>
+              </button>
+            </div>
+          </div>
+
+          <div class="document-content">
+            <p class="document-description">{{ document.description }}</p>
+            
+            <div class="document-meta">
+              <div class="meta-item">
+                <i class="material-icons">person</i>
+                <span>{{ document.uploadedBy }}</span>
+              </div>
+              <div class="meta-item">
+                <i class="material-icons">calendar_today</i>
+                <span>{{ formatDate(document.uploadDate!) }}</span>
+              </div>
+              <div class="meta-item" *ngIf="document.fileSize">
+                <i class="material-icons">storage</i>
+                <span>{{ formatFileSize(document.fileSize) }}</span>
+              </div>
+              <div class="meta-item" *ngIf="document.fileName">
+                <i class="material-icons">insert_drive_file</i>
+                <span>{{ document.fileName }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <app-pagination
+        [currentPage]="currentPage"
+        [totalPages]="totalPages"
+        [totalElements]="totalElements"
+        [pageSize]="pageSize"
+        (pageChange)="onPageChange($event)"
+      ></app-pagination>
+    </div>
+  </div>
+</div>
+

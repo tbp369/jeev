@@ -1,0 +1,159 @@
+<div class="container">
+  <div class="upload-container">
+    <div class="card">
+      <div class="upload-header">
+        <h2>Upload New Document</h2>
+        <p>Fill in the details and select a file to upload</p>
+      </div>
+
+      @if (!uploading) {
+        <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+          <!-- Title -->
+          <div class="form-group">
+            <label for="title">Document Title *</label>
+            <input 
+              type="text" 
+              id="title"
+              class="form-control" 
+              formControlName="title"
+              [class.is-invalid]="f['title'].invalid && f['title'].touched"
+              placeholder="Enter document title"
+            >
+            @if (f['title'].invalid && f['title'].touched) {
+              <div class="error">
+                @if (f['title'].errors?.['required']) {
+                  <div>Title is required</div>
+                }
+                @if (f['title'].errors?.['minlength']) {
+                  <div>Title must be at least 3 characters</div>
+                }
+              </div>
+            }
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="description">Description *</label>
+            <textarea 
+              id="description"
+              class="form-control" 
+              formControlName="description"
+              [class.is-invalid]="f['description'].invalid && f['description'].touched"
+              placeholder="Enter document description"
+              rows="4"
+            ></textarea>
+            @if (f['description'].invalid && f['description'].touched) {
+              <div class="error">
+                @if (f['description'].errors?.['required']) {
+                  <div>Description is required</div>
+                }
+                @if (f['description'].errors?.['minlength']) {
+                  <div>Description must be at least 10 characters</div>
+                }
+              </div>
+            }
+          </div>
+
+          <!-- File -->
+          <div class="form-group">
+            <label for="file">Select File *</label>
+            <div class="file-input-container">
+              <input 
+                type="file" 
+                id="file"
+                class="file-input"
+                (change)="onFileSelected($event)"
+                accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.gif"
+              >
+              <div class="file-input-display" [class.has-file]="selectedFile">
+                @if (!selectedFile) {
+                  <div class="file-placeholder">
+                    <i class="material-icons">cloud_upload</i>
+                    <span>Click to select a file or drag and drop</span>
+                    <small>Supported formats: PDF, DOC, DOCX, TXT, JPG, PNG, GIF (Max: 100MB)</small>
+                  </div>
+                } @else {
+                  <div class="file-info">
+                    <i class="material-icons">insert_drive_file</i>
+                    <div class="file-details">
+                      <span class="file-name">{{ selectedFile.name }}</span>
+                      <span class="file-size">{{ formatFileSize(selectedFile.size) }}</span>
+                    </div>
+                    <button type="button" class="remove-file-btn" (click)="clearFileSelection()">
+                      <i class="material-icons">close</i>
+                    </button>
+                  </div>
+                }
+              </div>
+            </div>
+            @if (f['file'].invalid && f['file'].touched) {
+              <div class="error">File is required</div>
+            }
+          </div>
+
+          <!-- Actions -->
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" routerLink="/documents">
+              Cancel
+            </button>
+            <button 
+              type="submit" 
+              class="btn btn-primary"
+              [disabled]="uploadForm.invalid || !selectedFile"
+            >
+              <i class="material-icons">cloud_upload</i>
+              Upload Document
+            </button>
+          </div>
+        </form>
+      }
+
+      <!-- Upload Progress -->
+      @if (uploading) {
+        <div class="upload-progress-container">
+          <div class="upload-progress-header">
+            <h3>Uploading Document...</h3>
+            <p>{{ uploadProgress.percentage }}% complete</p>
+          </div>
+
+          <div class="progress-bar">
+            <div 
+              class="progress-fill" 
+              [style.width.%]="uploadProgress.percentage"
+            ></div>
+          </div>
+
+          <div class="upload-details">
+            <p>
+              Uploaded {{ uploadProgress.uploadedChunks }} of {{ uploadProgress.totalChunks }} chunks
+            </p>
+            @if (selectedFile) {
+              <p>File: {{ selectedFile.name }} ({{ formatFileSize(selectedFile.size) }})</p>
+            }
+          </div>
+
+          <div class="upload-actions">
+            <button type="button" class="btn btn-secondary" (click)="cancelUpload()">
+              Cancel Upload
+            </button>
+            <!-- Resume functionality could be added here -->
+          </div>
+        </div>
+      }
+
+      <!-- Upload Complete -->
+      @if (uploadProgress.isComplete) {
+        <div class="upload-complete">
+          <div class="success-icon">
+            <i class="material-icons">check_circle</i>
+          </div>
+          <h3>Upload Complete!</h3>
+          <p>Your document has been successfully uploaded.</p>
+          <button class="btn btn-primary" routerLink="/documents">
+            View Documents
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</div>

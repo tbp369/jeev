@@ -1,0 +1,168 @@
+<div class="container">
+
+    @if (loading) {
+      <div class="loading">
+        <div class="spinner-large"></div>
+        <p>Loading document...</p>
+      </div>
+    }
+  
+    @if (!loading && document) {
+      <div class="edit-container">
+  
+        <!-- Header -->
+        <div class="edit-header">
+          <div class="breadcrumb">
+            <a routerLink="/documents">Documents</a>
+            <i class="material-icons">chevron_right</i>
+            <a [routerLink]="['/documents', document.id]">{{ document.title }}</a>
+            <i class="material-icons">chevron_right</i>
+            <span>Edit</span>
+          </div>
+          <h1>Edit Document</h1>
+        </div>
+  
+        <div class="edit-content">
+  
+          <!-- Document Info Card -->
+          <div class="document-info-card">
+            <h3>Document Information</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <label>File Name</label>
+                <span>{{ document.fileName || 'Unknown' }}</span>
+              </div>
+              
+              <div class="info-item">
+                <label>Uploaded By</label>
+                <span>{{ document.uploadedBy }}</span>
+              </div>
+              <div class="info-item">
+                <label>Upload Date</label>
+                <span>{{ formatDate(document.uploadDate) }}</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Edit Form -->
+          <div class="edit-form-card">
+            <h3>Edit Metadata</h3>
+            <p class="form-description">
+              You can update the title and description of this document. The file itself cannot be changed.
+            </p>
+  
+            <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  
+              <!-- Title -->
+              <div class="form-group">
+                <label for="title">Document Title *</label>
+                <input
+                  type="text"
+                  id="title"
+                  class="form-control"
+                  formControlName="title"
+                  [class.is-invalid]="f['title'].invalid && f['title'].touched"
+                  placeholder="Enter document title"
+                >
+  
+                @if (f['title'].invalid && f['title'].touched) {
+                  <div class="error">
+                    @if (f['title'].errors?.['required']) {
+                      <div>Title is required</div>
+                    }
+                    @if (f['title'].errors?.['minlength']) {
+                      <div>Title must be at least 3 characters</div>
+                    }
+                  </div>
+                }
+              </div>
+  
+              <!-- Description -->
+              <div class="form-group">
+                <label for="description">Description *</label>
+                <textarea
+                  id="description"
+                  class="form-control"
+                  formControlName="description"
+                  [class.is-invalid]="f['description'].invalid && f['description'].touched"
+                  placeholder="Enter document description"
+                  rows="6"
+                ></textarea>
+  
+                @if (f['description'].invalid && f['description'].touched) {
+                  <div class="error">
+                    @if (f['description'].errors?.['required']) {
+                      <div>Description is required</div>
+                    }
+                    @if (f['description'].errors?.['minlength']) {
+                      <div>Description must be at least 10 characters</div>
+                    }
+                  </div>
+                }
+              </div>
+  
+              <!-- Actions -->
+              <div class="form-actions">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  (click)="cancel()"
+                  [disabled]="saving"
+                >
+                  Cancel
+                </button>
+  
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  [disabled]="editForm.invalid || saving"
+                >
+                  @if (saving) {
+                    <span class="spinner"></span>
+                    Saving...
+                  } @else {
+                    <i class="material-icons">save</i>
+                    Save Changes
+                  }
+                </button>
+              </div>
+            </form>
+          </div>
+  
+          <!-- File Actions Card -->
+          <div class="file-actions-card">
+            <h3>File Actions</h3>
+            <p class="actions-description">
+              Additional actions you can perform with this document.
+            </p>
+  
+            <div class="action-buttons">
+              <button
+                class="action-btn view-action"
+                [routerLink]="['/documents', document.id]"
+              >
+                <i class="material-icons">visibility</i>
+                <div class="action-content">
+                  <span class="action-title">View Document</span>
+                  <span class="action-description">Go back to document details</span>
+                </div>
+              </button>
+  
+              <button
+                class="action-btn download-action"
+                (click)="downloadDocument()"
+              >
+                <i class="material-icons">download</i>
+                <div class="action-content">
+                  <span class="action-title">Download File</span>
+                  <span class="action-description">Save file to your device</span>
+                </div>
+              </button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    }
+  </div>
+  

@@ -1,0 +1,35 @@
+<div class="pagination-container" *ngIf="totalPages > 1">
+  <div class="pagination-info">
+    Showing {{ getStartItem() }} to {{ getEndItem() }} of {{ totalElements }} results
+  </div>
+  
+  <div class="pagination">
+    <button 
+      class="page-btn"
+      [disabled]="currentPage === 0"
+      (click)="onPreviousClick()"
+    >
+      <i class="material-icons">chevron_left</i>
+      Previous
+    </button>
+
+    <button 
+      *ngFor="let page of pages"
+      class="page-btn"
+      [class.active]="page === currentPage"
+      (click)="onPageClick(page)"
+    >
+      {{ page + 1 }}
+    </button>
+
+    <button 
+      class="page-btn"
+      [disabled]="currentPage === totalPages - 1"
+      (click)="onNextClick()"
+    >
+      Next
+      <i class="material-icons">chevron_right</i>
+    </button>
+  </div>
+</div>
+

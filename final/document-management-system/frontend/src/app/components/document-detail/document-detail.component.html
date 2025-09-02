@@ -1,0 +1,188 @@
+<div class="container">
+
+    @if (loading) {
+        <div class="loading">
+            <div class="spinner-large"></div>
+            <p>Loading document...</p>
+        </div>
+    }
+
+    @if (!loading && document) {
+        <div class="document-detail">
+
+            <!-- Header -->
+            <div class="detail-header">
+                <div class="header-content">
+                    <div class="breadcrumb">
+                        <a routerLink="/documents">Documents</a>
+                        <i class="material-icons">chevron_right</i>
+                        <span>{{ document.title }}</span>
+                    </div>
+
+                    <div class="header-actions">
+                        <button class="btn btn-secondary" (click)="editDocument()">
+                            <i class="material-icons">edit</i>
+                            Edit
+                        </button>
+                        <button class="btn btn-primary" (click)="downloadDocument()">
+                            <i class="material-icons">download</i>
+                            Download
+                        </button>
+                        <button class="btn btn-danger" (click)="deleteDocument()">
+                            <i class="material-icons">delete</i>
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Document Info -->
+            <div class="document-info-section">
+                <div class="info-card">
+                    <div class="document-title-section">
+                        <div class="file-icon">
+                            <i class="material-icons">{{ getFileTypeIcon(document.fileType) }}</i>
+                        </div>
+                        <div class="title-content">
+                            <h1>{{ document.title }}</h1>
+                            <p class="document-description">{{ document.description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="document-metadata">
+                        <div class="metadata-grid">
+                            @if (document.uploadedBy) {
+                                <div class="metadata-item">
+                                    <label>Uploaded By</label>
+                                    <span>{{ document.uploadedBy }}</span>
+                                </div>
+                            }
+                            @if (document.uploadDate) {
+                                <div class="metadata-item">
+                                    <label>Upload Date</label>
+                                    <span>{{ formatDate(document.uploadDate) }}</span>
+                                </div>
+                            }
+                            @if (document.fileName) {
+                                <div class="metadata-item">
+                                    <label>File Name</label>
+                                    <span>{{ document.fileName }}</span>
+                                </div>
+                            }
+                            @if (document.fileSize != null) {
+                                <div class="metadata-item">
+                                    <label>File Size</label>
+                                    <span>{{ formatFileSize(document.fileSize) }}</span>
+                                </div>
+                            }
+                            @if (document.fileType) {
+                                <div class="metadata-item">
+                                    <label>File Type</label>
+                                    <span>{{ document.fileType }}</span>
+                                </div>
+                            }
+                            @if (document.id) {
+                                <div class="metadata-item">
+                                    <label>Document ID</label>
+                                    <span>{{ document.id }}</span>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            @if (canPreview) {
+                <div class="preview-section">
+                    <div class="preview-card">
+                        <div class="preview-header">
+                            <h3>File Preview</h3>
+                            @if (!previewUrl && !previewLoading) {
+                                <button class="btn btn-secondary" (click)="loadPreview()">
+                                    <i class="material-icons">visibility</i>
+                                    Load Preview
+                                </button>
+                            }
+                        </div>
+
+                        <div class="preview-content">
+                            @if (previewLoading) {
+                                <div class="preview-loading">
+                                    <div class="spinner"></div>
+                                    <p>Loading preview...</p>
+                                </div>
+                            }
+
+                            @if (previewUrl && !previewLoading) {
+                                <div class="preview-display">
+                                    @if (document.fileType?.startsWith('image/')) {
+                                        <img [src]="previewUrl" [alt]="document.title" class="image-preview" />
+                                    }
+                                    @if (document.fileType === 'application/pdf') {
+                                        <iframe [src]="previewSafeUrl" class="pdf-preview" frameborder="0"></iframe>
+                                    }
+                                    @if (document.fileType === 'text/plain') {
+                                        <div class="text-preview">
+                                            <p>Text preview functionality would be implemented here</p>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- No Preview Available -->
+            @if (!canPreview) {
+                <div class="no-preview-section">
+                    <div class="no-preview-card">
+                        <div class="no-preview-content">
+                            <i class="material-icons">visibility_off</i>
+                            <h3>Preview Not Available</h3>
+                            <p>This file type cannot be previewed in the browser.</p>
+                            <button class="btn btn-primary" (click)="downloadDocument()">
+                                <i class="material-icons">download</i>
+                                Download File
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Actions Section -->
+            <div class="actions-section">
+                <div class="actions-card">
+                    <h3>Actions</h3>
+                    <div class="action-buttons">
+                        <button class="action-btn edit-action" (click)="editDocument()">
+                            <i class="material-icons">edit</i>
+                            <div class="action-content">
+                                <span class="action-title">Edit Document</span>
+                                <span class="action-description">Update title and description</span>
+                            </div>
+                        </button>
+
+                        <button class="action-btn download-action" (click)="downloadDocument()">
+                            <i class="material-icons">download</i>
+                            <div class="action-content">
+                                <span class="action-title">Download File</span>
+                                <span class="action-description">Save file to your device</span>
+                            </div>
+                        </button>
+
+                        <button class="action-btn delete-action" (click)="deleteDocument()">
+                            <i class="material-icons">delete</i>
+                            <div class="action-content">
+                                <span class="action-title">Delete Document</span>
+                                <span class="action-description">Permanently remove this document</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>

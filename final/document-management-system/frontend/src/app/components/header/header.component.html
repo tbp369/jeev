@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="header-content">
+    <div class="logo">
+      <a routerLink="/" class="logo-link">Document Management System</a>
+    </div>
+    
+    <nav class="nav-links" *ngIf="isAuthenticated()">
+      <a routerLink="/documents" routerLinkActive="active" class="nav-link">Documents</a>
+      <a routerLink="/upload" routerLinkActive="active" class="nav-link">Upload</a>
+      <div class="user-menu">
+        <span class="user-name">{{ currentUser?.username }}</span>
+        <button class="btn btn-secondary logout-btn" (click)="logout()">Logout</button>
+      </div>
+    </nav>
+
+    <nav class="nav-links" *ngIf="!isAuthenticated()">
+      <a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
+      <a routerLink="/register" routerLinkActive="active" class="nav-link">Register</a>
+    </nav>
+  </div>
+</header>
+
